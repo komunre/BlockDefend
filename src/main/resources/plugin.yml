@@ -1,0 +1,51 @@
+name: DefendBlock
+main: dev.komunre.defendblock.DefendBlock
+version: 0.1
+permissions:
+   blocks.*:
+      description: All access to blocks
+      children:
+         blocks.regions.create: true
+         blocks.manipulate: true
+   blocks.manipulate:
+     description: Place and break blocks in safe regions
+     default: op
+   blocks.regions.create:
+     description: Create new regions
+     default: op
+commands:
+   addsafeplace:
+      description: Adds safe block place region
+      usage: /<command> [xmin] [ymin] [zmin] [xmax] [ymax] [zmax]
+      permission: blocks.regions.create
+      permission-message: You need <permission> to create safe block regions
+   addsafebreak:
+      description: Adds safe block break region
+      usage: /<command> [xmin] [ymin] [zmin] [xmax] [ymax] [zmax]
+      permission: blocks.regions.create
+      permission-message: You need <permission> to create safe block regions
+   addsafeattack:
+      description: Prevents entities from attacking anyone
+      usage: /<command> [xmin] [ymin] [zmin] [xmax] [ymax] [zmax]
+      permission: blocks.regions.create
+      permission-message: You need <permission> to create safe block regions
+   addsafeinteract:
+      description: Prevents entities from interacting with anything
+      usage: /<command> [xmin] [ymin] [zmin] [xmax] [ymax] [zmax]
+      permission: blocks.regions.create
+      permission-message: You need <permission> to create safe block regions
+   addsafeall:
+      description: Disallows any block and entities manipulation
+      usage: /<command> [xmin] [ymin] [zmin] [xmax] [ymax] [zmax]
+      permission: blocks.regions.create
+      permission-message: You need <permission> to create safe block regions
+   addsafeantiblock:
+      description: Prevents players from manipulating blocks
+      usage: /<command> [xmin] [ymin] [zmin] [xmax] [ymax] [zmax]
+      permission: blocks.regions.create
+      permission-message: You need <permission> to create safe block regions
+   addsafethree:
+      description: Prevents players from manipulating blocks and attacking other players
+      usage: /<command> [xmin] [ymin] [zmin] [xmax] [ymax] [zmax]
+      permission: blocks.regions.create
+      permission-message: You need <permission> to create safe block regions
